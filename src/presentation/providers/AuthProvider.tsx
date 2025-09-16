@@ -1,7 +1,6 @@
 
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { Text, View } from 'react-native';
 import { RootStackParamList } from '../navigation/StackNavigator';
 import { PropsWithChildren, useEffect } from 'react';
 import { useAuthStore } from '../store/auth/useAuthStore';
