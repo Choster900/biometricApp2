@@ -19,7 +19,24 @@ export const App = () => {
 
     return (
         <ApplicationProvider  {...eva} theme={theme}>
-            <NavigationContainer>
+            <NavigationContainer
+                theme={{
+                    dark: colorScheme === 'dark',
+                    colors: {
+                        primary: theme['color-primary-500'],
+                        background: backgroundColor,
+                        card: theme['color-basic-100'],
+                        text: theme['color-basic-color'],
+                        border: theme['color-basic-600'],
+                        notification: theme['color-primary-500'],
+                    },
+                    fonts: {
+                        regular: { fontFamily: 'System', fontWeight: 'normal' as 'normal' },
+                        medium: { fontFamily: 'System', fontWeight: '500' as '500' },
+                        bold: { fontFamily: 'System', fontWeight: 'bold' as 'bold' },
+                        heavy: { fontFamily: 'System', fontWeight: '900' as '900' },
+                    }
+                }}>
                 <AuthProvider>
                     <StackNavigator />
                 </AuthProvider>

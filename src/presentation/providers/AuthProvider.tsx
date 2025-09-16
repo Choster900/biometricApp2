@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
 
                 navigation.reset({
                     index: 0,
-                    routes: [{ name: 'HomeScreen' }],
+                    routes: [{ name: 'DrawerNavigator' }],
                 });
 
             }else {
